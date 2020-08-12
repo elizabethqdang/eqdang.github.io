@@ -344,6 +344,9 @@
 	section, article {
 		&.special {
 			text-align: center;
+			display: flex;
+			justify-content: space-around;
+			align-content: space-around;
 		}
 	}
 
@@ -474,7 +477,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
@@ -647,15 +650,20 @@
 
 		&.special {
 			text-align: center;
+			display: flex;
+			flex-direction: row nowrap;
+			align-content: space-around;
 		}
 
 		.image {
 			&.featured {
 				border-radius: 0;
 				display: block;
-				margin: $box-padding 0 $box-padding ($box-padding * -1);
+				// margin: $box-padding 0 $box-padding ($box-padding * -1);
 				position: relative;
-				width: calc(100% + #{$box-padding * 2});
+				// width: calc(100% + #{$box-padding * 2});
+				width: 100%;
+				margin-bottom: 10%;
 
 				img {
 					border-radius: 0;
@@ -670,6 +678,8 @@
 
 					img {
 						border-radius: _size(border-radius) _size(border-radius) 0 0;
+						width: 100%;
+						margin-bottom: 10%;
 					}
 				}
 
@@ -680,6 +690,7 @@
 
 					img {
 						border-radius: 0 0 _size(border-radius) _size(border-radius);
+						width: 100%;
 					}
 				}
 			}
@@ -759,13 +770,14 @@
 
 	.image {
 		border-radius: _size(border-radius);
-		border: 0;
+		border: 1px solid #CCC;
 		display: inline-block;
 		position: relative;
 
 		img {
 			border-radius: _size(border-radius);
 			display: block;
+			width: 100%;
 		}
 
 		&.left {
@@ -860,7 +872,7 @@
 
 	ul.actions {
 		@include vendor('display', 'flex');
-		flex-direction: column;
+		flex-direction: row nowrap;
 		cursor: default;
 		list-style: none;
 		margin-left: (_size(element-margin) * -0.5);
@@ -1990,6 +2002,7 @@
 			ul {
 				&.actions {
 					margin: 0 0 _size(element-margin) 0;
+					display: flex;
 
 					li {
 						display: block;

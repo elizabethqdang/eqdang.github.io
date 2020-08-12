@@ -2384,7 +2384,7 @@ div.separator-container div.separator-border:after {
 				}
 
 		.box.special {
-			text-align: center;
+			text-align: left;
 			border-width: 1px;
 			border-style: solid;
 			border-color: rgb(187, 187, 187);
@@ -2394,9 +2394,22 @@ div.separator-container div.separator-border:after {
 			display: flex;
 			flex-direction: column;
 			flex-basis: auto;
-			padding-bottom: 2em;
 			height: auto;
 			box-sizing: border-box;
+			padding: 0 2em 2em;
+		}
+
+		.body.major.special {
+			display: flex;
+			flex-basis: row nowrap;
+			align-items: flex-start;
+			justify-content: space-around;
+			height: auto;
+			/* justify-content: center; */
+		}
+
+		.body.major.special p {
+			font-size: 1.3em;
 		}
 
 		.box .image.featured {
@@ -2407,26 +2420,18 @@ div.separator-container div.separator-border:after {
 			width: 100%;
 			position: relative;
 			align-content: inherit;
-			flex-basis: auto;
+			/* flex-basis: auto; */
 			box-sizing: content-box;
 		}
-
+		
 		.box.special .image.profile-pict {
-			/* max-height: 300px; */
-			display: flex;
-			width: inherit;
+			max-height: 300px;
 			min-height: 100px;
 			box-sizing: initial;
 			position: relative;
-			/* outline-width: 100%; */
-			flex-basis: 0;
 			border-radius: 0 0 20px 20px;
-			bottom: -2em;
-			max-height: 250px;
-			flex-basis: auto;
-			background-image: url("/images/profile-pict.jpeg");
-			/* background-repeat: repeat-600px; */
-			background-position: left, 600px;
+			background-image: url("/images/profile-pict.jpg") 0 0 no-repeat;
+			background-position: center;
 			background-size: auto 300px;
 			background-blend-mode: luminosity;
 			/* align-content: center; */
@@ -2434,17 +2439,16 @@ div.separator-container div.separator-border:after {
 			justify-content: center;
 			-webkit-backdrop-filter: blur(2);
 			opacity: 50%;
+			padding: 0;
+			margin: 0;
 		}
 
 		.box.special .image.profile-pict img {
 				max-height: 250px;
-				width: auto;
+				/* width: auto; */
 				display: block;
 				position: relative;
 				box-sizing: content-box;
-				align-content: stretch;
-				align-items: stretch;
-				flex-basis: auto;
 				border-radius: 0;
 				opacity: 95%;
 			}
@@ -2461,7 +2465,6 @@ div.separator-container div.separator-border:after {
 				margin-top: 0;
 				border-radius: 6px 6px 0 0;
 			/* width: calc(100% + 2em); */
-				width: 100%;
 				box-sizing: inherit;
 				justify-content: center;
 			}
@@ -2469,7 +2472,6 @@ div.separator-container div.separator-border:after {
 				.box .image.featured:first-child img, .box .image.profile-pict:first-child
 {
 					border-radius: 6px 6px 0 0;
-					width: 100%;
 					box-sizing: content-box;
 
 				}
@@ -2483,7 +2485,7 @@ div.separator-container div.separator-border:after {
 
 				.box .image.featured:last-child img {
 					border-radius: 0 0 6px 6px;
-					width: 100%;
+					/* width: 100%; */
 			/* width: calc(100% + 2em); */
 					box-sizing: inherit;
 				}
@@ -2493,6 +2495,7 @@ div.separator-container div.separator-border:after {
 	}
 
 /* Icon */
+
 
 	.icon {
 		text-decoration: none;
@@ -2577,7 +2580,7 @@ div.separator-container div.separator-border:after {
 		border: 0;
 		display: inline-block;
 		position: relative;
-		width: 100%;
+		/* width: 100%; */
 	}
 
 		.image img {
@@ -3601,6 +3604,8 @@ div.separator-container div.separator-border:after {
 
 			header.major {
 				padding: 0;
+				display: flex;
+				flex-direction: row nowrap;
 				/* padding: 0 4em; */
 			}
 
@@ -3835,12 +3840,16 @@ div.separator-container div.separator-border:after {
 
 			header.major {
 				padding: 1em;
+				display: flex;
+				flex-direction: row nowrap;
 			}
 
 				header.major h2, header.major p {
 					padding-left: 0.5em;
 					padding-right: 0.5em;
+					display: inline-block;
 				}
+
 
 		/* Box */
 
