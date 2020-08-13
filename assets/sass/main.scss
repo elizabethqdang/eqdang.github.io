@@ -345,8 +345,8 @@
 		&.special {
 			text-align: center;
 			display: flex;
-			justify-content: space-around;
-			align-content: space-around;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 
@@ -652,7 +652,8 @@
 			text-align: center;
 			display: flex;
 			flex-direction: row nowrap;
-			align-content: space-around;
+			align-content: center;
+			justify-content: center;
 		}
 
 		.image {
