@@ -7,7 +7,7 @@ body {
 
 #SOUNDPOOF.col-4, #QUARREL.col-4, #NOOKBNB.col-4{
 	/* z-index: 1; */
-	width: 800px;
+	width: 33%;
 	position: absolute;
 	/* opacity: 1; */
 	height: 100%;
