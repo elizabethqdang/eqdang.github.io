@@ -3371,9 +3371,10 @@ div.separator-container div.separator-border:after {
 		background-image: url("images/top-1600.svg"), url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
 		background-position: bottom center, bottom left, bottom right, top left,	top center;
 		background-repeat: repeat-x, no-repeat, no-repeat, repeat, no-repeat;
+		height: 550px;
 		background-size: cover, 50%, 50%, auto, cover;
 		color: #fff;
-		padding: 12em 0 20em 0;
+		padding: 81px 0;
 		text-align: center;
 	}
 
@@ -3593,7 +3594,7 @@ div.separator-container div.separator-border:after {
 		/* Banner */
 
 			#banner {
-				padding: 10em 0 18em 0;
+				padding: 81px 0;
 			}
 
 	}
